@@ -1,0 +1,65 @@
+from time import sleep_ms
+from machine import Pin, PWM
+
+red = PWM(Pin(2, Pin.OUT), freq=400) # Initialize at 400Hz
+green = PWM(Pin(12, Pin.OUT), freq=400) # Initialize at 400Hz
+blue = PWM(Pin(14, Pin.OUT), freq=400) # Initialize at 400Hz
+
+for j in range(0,20):
+    for i in range(1023,-1,-10):
+        red.duty(i)
+	green.duty(i+200)
+        sleep_ms(3)
+    for i in range(0, 1024, 10):
+        red.duty(i)
+	green.duty(i+200)
+        sleep_ms(2)
+    for i in range(1023,-1,-10):
+        green.duty(i)
+	blue.duty(i+200)
+        sleep_ms(3)
+    for i in range(0, 1024, 10):
+        green.duty(i)
+	blue.duty(i+200)
+        sleep_ms(2)
+    for i in range(1023,-1,-10):
+        blue.duty(i)
+	red.duty(i+200)
+        sleep_ms(3)
+    for i in range(0, 1024, 10):
+        blue.duty(i)
+	red.duty(i+200)
+        sleep_ms(2)
+
+
+
+
+
+
+red_led = Pin(2, mode=Pin.OUT)    # D9 on Wemos D1, LED on the SOM
+blue_led = Pin(14, mode=Pin.OUT)   # D13 on Wemos D1, LED connected to SCK
+green_led = Pin(12, mode=Pin.OUT)
+
+def set_rgb(r,g,b):
+    red_led.value(1-r)
+    green_led.value(1-g)
+    blue_led.value(1-b)
+
+for i in range(0,20):
+    set_rgb(0,0,1)
+    sleep(0.2)
+
+    set_rgb(0,1,1)
+    sleep(0.2)
+
+    set_rgb(1,1,0)
+    sleep(0.2)
+
+    set_rgb(1,0,0)
+    sleep(0.2)
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript">
+  var ws = new WebSocket("ws://iot.koodur.com:80/ws/holger/");
+  ws.onopen = function (event) { console.info("websocket connected"); };
+  ws.onmessage = function (event) { console.log(event.data); }
+  var lastValue = false;
+  function duty(e) {
+    if (lastValue == e.value) return;
+    lastValue = e.value;
+    ws.send("duty:" + e.value);
+  }
+  </script>
+</head>
+<body>
+  <input type="range" min="0" max="1023" step="10" onMouseMove="duty(this);" onTouchMove="duty(this);"/>
+</body>
+</html>
