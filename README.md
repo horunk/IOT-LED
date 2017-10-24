@@ -10,3 +10,10 @@ IOT LED project files
 2.1 Install ampy utility and Copy boot.py file to microcontroller to automatically connect to WLAN with SSID 'itcollege'
 pip install adafruit-ampy # Install Adafruit MicroPython Tool
 ampy -p /dev/ttyUSB0 put boot.py # Upload boot.py over UART
+
+
+
+change IP in main.py as necessary
+
+go to http://enos.itcollege.ee/~horunk/iot.html to use the control slider
+
