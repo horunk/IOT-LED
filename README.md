@@ -1,5 +1,4 @@
 # IOT-LED
-IOT LED project files
 
 Requirements:
 RGB LED
