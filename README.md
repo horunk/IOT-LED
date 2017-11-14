@@ -6,7 +6,7 @@ WEMOS ESP-WROOM-32 microcontroller capable of running micropython
 USB data cable
 some cables for connecting LED to microcontroller pins
 
-1. Flashing the microcontroller:
+1. Flashing the microcontroller: 
 1.1 Download the .bin file from terminal: 
 wget http://micropython.org/resources/firmware/esp32-20171024-v1.9.2-280-g2305d848.bin
 
