@@ -8,7 +8,7 @@ Requirements:
 
 1. Flashing the microcontroller: 
 1.1 Download the .bin file from terminal: 
-'wget http://micropython.org/resources/firmware/esp32-20171024-v1.9.2-280-g2305d848.bin'
+´wget http://micropython.org/resources/firmware/esp32-20171024-v1.9.2-280-g2305d848.bin´
 
 1.2 Erase current and flash new file:
 'sudo esptool.py -p /dev/ttyUSB0 -b 460800 erase_flash'
