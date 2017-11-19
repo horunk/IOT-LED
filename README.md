@@ -1,10 +1,10 @@
 ## IOT-LED
 
 #### Requirements:
--RGB LED;
--WEMOS ESP-WROOM-32 microcontroller capable of running micropython;
--USB data cable;
--some cables for connecting LED to microcontroller pins;
+- RGB LED;
+- WEMOS ESP-WROOM-32 microcontroller capable of running micropython;
+- USB data cable;
+- some cables for connecting LED to microcontroller pins;
 
 
 #### 1. Flashing the microcontroller: 
