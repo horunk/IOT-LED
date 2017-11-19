@@ -29,7 +29,7 @@
 
 
 #### 3. Controlling LED
-  3.1. Use following command to connect to microcontroller and see feedback
+  3.1. Use following command to connect to microcontroller and see feedback (optional)
 - ```picocom -b115200 /dev/ttyUSB0```
 
   3.2 Go to http://enos.itcollege.ee/~horunk/iot.html 
